@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    max-width: 82rem;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+.header__nav{
+    @apply absolute bg-white right-[-20rem] top-[3.5rem] overflow-hidden h-[100vh] p-0 w-[15rem] z-[1]
+}
+.header__nav.open{
+    @apply right-0;
+}
+
+.toggle__menu span{
+    width: 2rem;
+    height: .2rem;
+    background-color: #1F285B;
+    display: block;
+    margin: .2rem;
+    border-radius: 5rem;
+}
+.toggle__menu.open span:first-child{
+    @apply translate-x-[13px] translate-y-[-1px] rotate-[225deg] w-[1.2rem]  ease-out duration-[.5s];
+}
+
+.toggle__menu.open span:last-child{
+    @apply translate-x-[12px] translate-y-[1px] rotate-[-225deg] w-[1.2rem] ease-out duration-[.5s];
+}
+.btn{
+    @apply inline-block p-[1rem] bg-wordcolor text-light;
+}
+
+
+.banner{
+   @apply w-full h-[60vh] bg-no-repeat object-cover; 
+   background-size: cover;
+}
+
+.posts img{
+    @apply w-full h-[10rem] object-cover lg:w-full lg:h-[15rem];
+}
+.posts .cards:hover {
+    @apply bg-wordcolor;
+}
+.posts .cards:hover p{
+    @apply text-light
+}
+.posts .cards:hover h3{
+    @apply text-light
+}
+.posts .cards:hover a{
+    @apply text-light
+}
